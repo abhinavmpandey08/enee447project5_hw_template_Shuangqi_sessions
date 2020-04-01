@@ -81,6 +81,9 @@ core0:
 
 	// set up user stack and jump to shell
 	cps		#USR_mode
+
+    ldr lr, =hang
+
 	ldr		sp, stack_address_runningthread
 	ldr		r0, start_address_runningthread
 	mov	pc, r0
